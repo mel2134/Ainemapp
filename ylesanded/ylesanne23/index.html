@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>  
+        .checked {  
+            color : yellow;  
+            font-size : 20px;  
+        }  
+        .unchecked {  
+            font-size : 20px;  
+        } 
+
+    </style> 
+</head>
+    <body>
+        <div class="container mt-5">
+            <form id="postituseVorm" data-stars="1">
+                <div id="rating">
+                    <span class = "fa fa-star checked"></span>
+                    <span class = "fa fa-star unchecked"></span>
+                    <span class = "fa fa-star unchecked"></span>
+                    <span class = "fa fa-star unchecked"></span>
+                    <span class = "fa fa-star unchecked"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="tekst" class="form-label">Kommentaar</label>
+                    <textarea class="form-control" id="tekst" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="send">Lisa</button>
+            </form>
+            <a href="admin.html" class="btn btn-primary">Admin Panel</a>
+            <hr>
+            <div id="postitused">
+                
+            </div>
+        </div>
+        <script src="app.js" type="module"></script>
+    </body>
+</html>

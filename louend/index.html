@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        canvas{border: 2px solid red;}
+     </style>
+    <script type="text/javascript">
+        //kui veebileht on laetud, siis käivitatakse draw() funktsioon
+        window.onload = draw;
+       
+        //draw() funktsioon, mis tegeleb kujundi joonistamisega
+        function body(){
+            var ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            //keha
+            ctx.lineWidth = 4; //joone jämedus
+            ctx.fillStyle = "rgb(255,0,0)";
+            ctx.strokeStyle = "red"; //joone värv
+            ctx.fillRect(50,130, 70, 20);
+            ctx.moveTo(52,130);
+            ctx.lineTo(57,70);
+            ctx.lineTo(114,70);
+            ctx.lineTo(118,130);
+            ctx.stroke(); //loome joone kahe punkti vahel 
+        }
+        function draw(){
+        var canvas = document.getElementById('louend');
+          if (canvas.getContext){
+            var ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            //keha
+            ctx.lineWidth = 4; //joone jämedus
+            ctx.fillStyle = "rgb(255,0,0)";
+            ctx.strokeStyle = "red"; //joone värv
+            ctx.fillRect(50,130, 70, 20);
+            ctx.moveTo(52,130);
+            ctx.lineTo(57,70);
+            ctx.lineTo(114,70);
+            ctx.lineTo(118,130);
+            ctx.stroke(); //loome joone kahe punkti vahel 
+            ctx.fill();
+            ctx.closePath();
+
+            //vasak käsi
+            ctx.fillStyle = "rgb(255,0,0)";
+            ctx.moveTo(55,75);
+            ctx.lineTo(40,100);
+            ctx.lineTo(38,130);
+            ctx.lineTo(50,130);
+            ctx.stroke(); //loome joone kahe punkti vahel 
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow"; //joone värv
+            ctx.arc(40,140,10,3.3,0,false);
+            ctx.stroke();
+            ctx.closePath();
+
+            // parem käsi
+            ctx.beginPath();
+            ctx.fillStyle = "rgb(255,0,0)";
+            ctx.strokeStyle = "red"; //joone värv
+            ctx.moveTo(115,75);
+            ctx.lineTo(130,100);
+            ctx.lineTo(133,130);
+            ctx.lineTo(115,130);
+            ctx.stroke(); //loome joone kahe punkti vahel 
+            ctx.fill();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow"; //joone värv
+            ctx.arc(130,140,10,3.3,0,false);
+            ctx.stroke();
+            ctx.closePath();
+
+
+            //pea
+            ctx.beginPath();
+            ctx.fillStyle = "rgb(255,255,0)";
+            ctx.arc(85,45,25,Math.PI*2,0,true);
+            ctx.fill();
+
+
+
+            //jalad
+            ctx.fillStyle = "rgb(0,100,255)"; 
+            ctx.fillRect(50,140, 30, 60);
+            ctx.fillRect(90,140, 30, 60);
+            //ctx.fill();
+          }
+        }
+      </script>
+</head>
+<body>
+    <canvas id="louend" width="200" height="200"></canvas>
+</body>
+</html>

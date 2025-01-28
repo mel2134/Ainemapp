@@ -1,0 +1,66 @@
+#ruhm{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:50px;
+}
+
+h1 {
+    position: relative;
+    margin: 0;
+    color: white;
+    text-align: center;
+    background-color: rgb(129, 128, 128);
+    border-radius: 25px;
+    height: 200px;
+    width: 200px;
+    line-height: 195px;
+
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    height: 200px;
+    width: 200px;
+    border-radius: 25%;
+    border: 5px solid rgb(129, 128, 128);
+    animation: spin 15s linear infinite; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+body{
+    background-color: rgb(85, 85, 85);
+}
+.nimed{
+    padding: 1px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.nupp{
+    border-radius: 10px;
+    background-color: rgb(129, 128, 128);
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    border: 5px solid rgb(85,85,85);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13pt;
+    transition: border 1s ease,background-color 0.5s ease, color 0.3s ease;
+
+}
+.nupp:hover {
+    background-color: rgb(112, 111, 111);
+    color: rgb(255, 255, 255);
+    border-color: rgb(129, 128, 128);
+
+    
+}

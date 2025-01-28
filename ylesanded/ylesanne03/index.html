@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js" defer></script>
+</head>
+    <body>
+        <h1>Arvutamine</h1>
+        <h2>Aeg ja kaugus</h2>
+        <form onsubmit="return timeCalc();" method="POST">
+            <label>Kaugus: <input type="number" id="dis"/></label>
+            <br/>
+            <label>Kiirus: <input type="number" id="speed"/></label>
+            <br/>
+            <button type="submit">Arvuta</button>
+        </form>
+        <div id="travel_time"></div>
+
+        <h2>Postitused</h2>
+        <form onsubmit="return postsPerPage();" method="POST">
+            <label>Postitused: <input type="number" id="pos"/></label>
+            <br/>
+            <label>Lehekülgi: <input type="number" id="pages"/></label>
+            <br/>
+            <button type="submit">Arvuta</button>
+        </form>
+        <div id="pages_result"></div>
+        <h2>Töökulu</h2>
+        <form onsubmit="return kwhCalc();" method="POST">
+            <label>Server võimsus(W): <input type="number" id="wattage"/></label>
+            <br/>
+            <label>kWh hind sentides: <input type="number" id="price"/></label>
+            <br/>
+            <button type="submit">Arvuta</button>
+        </form>
+        <div id="wattage_result"></div>
+    </body>
+</html>
