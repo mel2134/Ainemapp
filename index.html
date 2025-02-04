@@ -7,7 +7,7 @@
 body {
     background: #2b2b2b;
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: Verdana;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -44,7 +44,7 @@ body {
 }
 
 .menu-button {
-    background: #4f4f4f;
+    background: #3f3e3e57;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -55,18 +55,20 @@ body {
 
 /* Dropdown inside custom-box */
 .dropdown-menu {
-    background: #333;
-    width: 150px;
+    background: #2b2b2b;
+    width: 125px;
     position: absolute;
     top: 50px;
     left: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-    
+    overflow: hidden;
     opacity: 0;
     transform: translateY(-10px);
     visibility: hidden;
-    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    transition: opacity 0.4s ease, transform 0.7s ease, visibility 0.7s;
+	top: 100%;
+    left: 0;
 }
 
 /* Show dropdown when hovering */
@@ -82,6 +84,7 @@ body {
     text-decoration: none;
     padding: 10px;
     border-bottom: 1px solid #444;
+	transition: background 0.7s ease;
 }
 
 .dropdown-menu a:last-child {
@@ -97,11 +100,6 @@ body {
 	margin: 0 10px; /* Adds spacing between items */
 }
 
-/* Ensure dropdown appears directly below the button */
-.dropdown-menu {
-    top: 100%;
-    left: 0;
-}
 .custom-box img {
     max-width: 100%; /* Ensures it scales properly */
     max-height: 80vh; /* Prevents it from overflowing */
@@ -116,10 +114,10 @@ body {
 .tilt-image {
     transition: transform 0.5s ease-out; /* Smooth movement */
     transform-style: preserve-3d; /* Enables 3D effect */
-	padding: 5%;
+	padding: 2%;
 }
 
-		</style>
+	</style>
 	</head>
 	<body>
 		<div class="custom-box">
@@ -184,31 +182,34 @@ body {
 					<button class="menu-button">Arendustsüklid</button>
 					<div class="dropdown-menu">
 						<a href="arendustsyklid/waterfall.html">Waterfall</a>
+						<a href="arendustsyklid/incremental.html">Incremental</a>
+						<a href="arendustsyklid/spiral.html">Spiral</a>
+						<a href="arendustsyklid/prototype.html">Prototype</a>
 					</div>
 				</div>
 			</div>
-			<h3>Mel Kosk TARpe23</h3>
+			<h2>Mel Kosk TARpe23</h2>
 			<img src="pilt.png" width="200" height="200" class="tilt-image">
 		</div>
 		<script>
 			document.addEventListener("DOMContentLoaded", () => {
-    const image = document.querySelector(".tilt-image");
+			const image = document.querySelector(".tilt-image");
 
-    image.addEventListener("mousemove", (e) => {
-        const rect = image.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        
-        const tiltX = -y * 90; /* Controls tilt on X-axis */
-        const tiltY = x * 90; /* Controls tilt on Y-axis */
-        
-        image.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-    });
+			image.addEventListener("mousemove", (e) => {
+				const rect = image.getBoundingClientRect();
+				const x = (e.clientX - rect.left) / rect.width - 0.5;
+				const y = (e.clientY - rect.top) / rect.height - 0.5;
+				
+				const tiltX = -y * 90; /* Controls tilt on X-axis */
+				const tiltY = x * 90; /* Controls tilt on Y-axis */
+				
+				image.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+			});
 
-    image.addEventListener("mouseleave", () => {
-        image.style.transform = "rotateX(0deg) rotateY(0deg)";
-    });
-});
+			image.addEventListener("mouseleave", () => {
+				image.style.transform = "rotateX(0deg) rotateY(0deg)";
+			});
+		});
 		</script>
 		
 		<!-- <table>
