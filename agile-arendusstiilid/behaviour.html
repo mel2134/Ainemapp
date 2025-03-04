@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Behavior</title>
 </head>
     <body>
-        
+        <h1>Behavior</h1>
+        <h3>Kirjeldus</h3>
+        <p>
+            BDD võimaldab illustreerida süsteemi käitumist. See julgustab kasutama vestlust ja <br>
+            konkreetseid näiteid lihtsas keeles kõigi arendustööga seotud isikute jaoks, et tuua <br>
+            süsteemi käitumisesse paremat selgust. Kasutades Gherkini keelt/süntaksit:<br>
+            <code>
+                Feature: Account Holder withdraws cash<br>
+                &nbsp;Scenario: Account has sufficient funds<br>
+                &nbsp;&nbsp;Given The account balance is $100<br>
+                &nbsp;&nbsp;And the card is valid<br>
+                &nbsp;&nbsp;And the machine contains enough money<br>
+                &nbsp;&nbsp;When the Account Holder requests $20<br>
+                &nbsp;&nbsp;Then the ATM should dispense $20<br>
+                &nbsp;&nbsp;And the account balance should be $80<br>
+                &nbsp;&nbsp;And the card should be returned<br>
+            </code>
+        </p>
+        <img src="pildid/bdd.png"/>
+        <h3>Case vahendid</h3>
+        <h3>Head ja halvad küljed</h3>
+        <table border="1">
+            <tr>
+                <td>Head</td>
+                <td>Halvad</td>
+            </tr>
+            <tr>
+                <td>hea</td>
+                <td>halb</td>
+            </tr>
+        </table>
+        <h3>Viited</h3>
     </body>
 </html>
