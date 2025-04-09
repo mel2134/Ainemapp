@@ -6,16 +6,34 @@
     <title>ERD</title>
 </head>
     <body>
-        <h3>Mis on ja kus kasutatakse</h3>
+        <h3>Mis see on ja kus kasutatakse</h3>
         <p>
-
+            ERD on strukturiseeritud diagramm mida kasutatakse andmebaaside disaini loomiseks.
+            Sellega saab visualiseerida kuidas andmebaas peaks töötama, nagu mis tabelid peavad<br>
+            olema seotud.
         </p>
-        <h3>Primary Key, Foreign Key ,Composite Key ja lihtsalt Key</h3>
+        <h3>Primary Key, Foreign Key, Composite Key ja lihtsalt Key</h3>
         <p>
-            
+            Primary Key on unikaalne identifikaator nagu ID,GUID.<br><br>
+            Foreign Key võti millega saab viidata ühe tabeli koolumit teise tabelisse. Näiteks<br>
+            tabelis "Kasutajad" on kolumn "Uid" ja tabelis "Tellimused" on ka kolumn "Uid". "Uid"<br>
+            on nüüd foreing key mis seob mõlemad tabelid omavahel.<br><br>
+            Composite Key on võti mis seob ühes tabelis kaks või rohkem koolumit. Seda kasutatakse<br>
+            siis kui tabelis ei ole võimalik ridu eristada nagu näiteks tabelis "Tellimused" on "TooteID" ja<br>
+            "TellimuseID" mõlemad ei pruugi olla ainuüksi unikaalsed, siis kombineeritakse need kaks ID'd<br>
+            et iga rida oleks unikaalne.<br><br>
+            Key on lihtsalt võti millega saab identifitseerida konkreetset või konkreetseid ridu ühes tabelis<br><br>
         </p>
-        <h3>Joonised</h3>
+        <h3>Ühenduselemendid</h3>
+        <img src="pictures/erd_datatypes.gif"/>
+        <img src="pictures/erd_datatypes2.png"/>
 
         <h3>Viited</h3>
+        <a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/">What is an ERD? - Paradigm</a><br>
+        <a href="https://www.techtarget.com/searchdatamanagement/definition/primary-key">Primary Key - Techtarget</a><br>
+        <a href="https://celerdata.com/glossary/composite-keys">Composite Keys - Celerdata</a><br>
+        <a href="https://www.cockroachlabs.com/blog/what-is-a-foreign-key/">Foreign Key - Cockroachlabs</a><br>
+        <a href="https://medium.com/learning-sql/introduction-to-sql-keys-5473c0e4e649">SQL Keys - Medium</a>
+        <a></a>
     </body>
 </html>
